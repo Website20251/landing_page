@@ -1,0 +1,271 @@
+/* Slider de galería personalizado */
+.custom-gallery-slider {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  overflow: hidden;
+  position: relative;
+}
+.gallery-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+}
+.gallery-slide {
+  flex: 0 0 120px;
+  margin: 0 30px;
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0.5;
+  z-index: 0;
+}
+.gallery-slide img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.gallery-slide.active {
+  transform: scale(1.5);
+  opacity: 1;
+  z-index: 1;
+}
+/* Swiper galería estilos */
+.galeria-swiper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+.galeria-swiper .swiper-slide {
+  opacity: 0.5;
+  transition: transform 0.4s, opacity 0.4s;
+}
+.galeria-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.2);
+  z-index: 2;
+}
+.galeria-swiper .swiper-slide img {
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+/*
+  styles.css - Estilos personalizados para Detalles con Amor
+  Autor: [Tu Nombre]
+  Descripción: Estilos para landing page de regalos y manualidades
+*/
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #fff8f3;
+  color: #5a3e36;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe3e3 0%, #fff8f3 100%);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.hero h1 {
+  color: #e07a7a;
+  letter-spacing: 2px;
+}
+
+.hero .lead {
+  color: #b97a56;
+  font-size: 1.3rem;
+}
+
+.btn-cta {
+  background: #e07a7a;
+  color: #fff;
+  border-radius: 30px;
+  padding: 0.75rem 2.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(224,122,122,0.15);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-cta:hover {
+  background: #b97a56;
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.hero-img {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-outline-cta {
+  border: 2px solid #e07a7a;
+  color: #e07a7a;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.btn-outline-cta:hover {
+  background: #e07a7a;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.producto-card {
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(224,122,122,0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
+  background: #fff;
+}
+
+.producto-card .card-img-top {
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.producto-card:hover {
+  box-shadow: 0 8px 32px rgba(224,122,122,0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+.producto-card .precio {
+  color: #b97a56;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.beneficios i {
+  color: #e07a7a;
+  margin-bottom: 0.5rem;
+}
+
+.galeria-img {
+  object-fit: cover;
+  height: 180px;
+  width: 100%;
+  box-shadow: 0 2px 12px rgba(224,122,122,0.10);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.galeria-img:hover {
+  transform: scale(1.04) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(224,122,122,0.18);
+}
+
+.testimonial {
+  background: #fff;
+  border-left: 5px solid #e07a7a;
+  color: #5a3e36;
+}
+
+.contact-info {
+  background: #fff8f3;
+  color: #5a3e36;
+  font-size: 1.1rem;
+}
+.contact-info a {
+  color: #e07a7a;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.18);
+  z-index: 999;
+  transition: background 0.2s, transform 0.2s;
+}
+.whatsapp-float:hover {
+  background: #128c7e;
+  transform: scale(1.08);
+}
+
+
+@media (max-width: 767px) {
+  .hero-img img {
+    max-width: 90vw;
+    height: auto;
+  }
+  .galeria-img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero .lead {
+    font-size: 1rem;
+  }
+  .galeria-img {
+    height: 80px;
+  }
+}
+
+/* Animación fade-in para secciones */
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+.productos, .beneficios, .galeria, .testimonios, .contacto {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+/* Burbujas decorativas globales */
+.bubbles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.bubbles-bg .bubble {
+  position: absolute;
+  bottom: -60px;
+  width: 32px;
+  height: 32px;
+  background: rgba(224,122,122,0.13);
+  border-radius: 50%;
+  animation: bubbleUp linear infinite;
+  pointer-events: none;
+}
+@keyframes bubbleUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}
